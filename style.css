@@ -413,6 +413,33 @@ nav.wrap{
   width:20px;
   border-radius:10px;
 }
+.card-link{
+  position:absolute;
+  top:10px;
+  left:10px;
+  z-index:3;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  width:32px;
+  height:32px;
+  border-radius:6px;
+  background:rgba(15,19,24,.6);
+  color:#fff;
+  -webkit-backdrop-filter:blur(4px);
+  backdrop-filter:blur(4px);
+  border:1px solid rgba(255,255,255,.25);
+  transition:background .15s,transform .15s;
+}
+.card-link svg{
+  width:16px;
+  height:16px;
+}
+.card-link:hover{
+  background:var(--gradient);
+  border-color:transparent;
+  transform:translateY(-1px);
+}
 .project-cat{
   font-size:.78rem;
   color:var(--mute);
