@@ -161,7 +161,7 @@ nav.wrap{
 }
 .hero-grid{
   display:grid;
-  grid-template-columns:1fr 300px;
+  grid-template-columns:1fr 380px;
   gap:56px;
   align-items:center;
 }
@@ -226,6 +226,7 @@ nav.wrap{
   border-radius:6px;
   border:1px solid var(--line);
   overflow:hidden;
+  background:var(--gradient);
 }
 .hero-photo img{
   width:100%;
@@ -613,7 +614,7 @@ footer p{
 
   /* hero */
   .hero-photo{
-    width:120px;
+    width:160px;
   }
   .hero h1{
     font-size:1.65rem;
@@ -702,13 +703,43 @@ footer p{
 }
 
 /* foto: bingkai gradasi */
+/* foto: cahaya gradasi dari belakang, menyebar ke latar halaman */
 .hero-photo{
-  border:2px solid transparent;
-  background:linear-gradient(var(--bg),var(--bg)) padding-box,var(--gradient) border-box;
+  position:relative;
+  isolation:isolate;
+  aspect-ratio:1/1;
+  border:0;
+  border-radius:0;
+  overflow:visible;
+  background:none;
+}
+.hero-photo::before{
+  content:"";
+  position:absolute;
+  inset:-20%;
+  z-index:-1;
+  background:
+    radial-gradient(45% 50% at 25% 75%, var(--grad-a), transparent 90%),
+    radial-gradient(45% 50% at 75% 25%, var(--grad-b), transparent 70%);
+  filter:blur(40px);
+  opacity:.55;
 }
 .hero-photo img{
-  border-radius:4px;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:top;
+  display:block;
+  -webkit-mask-image:
+    linear-gradient(to right,transparent 0,#000 14%,#000 86%,transparent 100%),
+    linear-gradient(to bottom,#000 70%,transparent 100%);
+  -webkit-mask-composite:source-in;
+  mask-image:
+    linear-gradient(to right,transparent 0,#000 14%,#000 86%,transparent 100%),
+    linear-gradient(to bottom,#000 70%,transparent 100%);
+  mask-composite:intersect;
 }
+:root[data-theme="dark"] .hero-photo::before{opacity:.4}
 
 /* teks gradasi */
 .hero-eyebrow,.project-cat{
