@@ -1,295 +1,548 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="id">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Muhammad Abdullah — Portofolio</title>
-  <meta name="description" content="Portofolio Muhammad Abdullah, lulusan Sistem Informasi dengan latar belakang Teknik Komputer dan Jaringan.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
-  
-  <script>
-    (function () {
-      var t;
-      try { t = localStorage.getItem('theme'); } catch (e) {}
-      if (!t) t = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-      document.documentElement.setAttribute('data-theme', t);
-    })();
-  </script>
-  <link rel="stylesheet" href="style.css">
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Muhammad Abdullah — Portofolio</title>
+    <meta
+      name="description"
+      content="Portofolio Muhammad Abdullah, lulusan Sistem Informasi dengan latar belakang Teknik Komputer dan Jaringan."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
 
-<body>
-<!-- header -->
-<header>
-  <nav class="wrap">
-    <div class="logo">Muhammad Abdullah</div>
-    <div class="nav-links" id="navLinks">
-      <a href="#tentang">Tentang</a>
-      <a href="#keahlian">Keahlian</a>
-      <a href="#proyek">Proyek</a>
-      <a href="#kontak" class="nav-btn">Hubungi saya</a>
-    </div>
-    <button class="theme-toggle" id="themeToggle" aria-label="Ganti tema terang/gelap" type="button">
-      <svg class="i-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
-      <svg class="i-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
-    </button>
-    <button class="nav-toggle" id="navToggle" aria-label="Buka menu"><span></span><span></span><span></span></button>
-  </nav>
-</header>
+    <script>
+      (function () {
+        var t;
+        try {
+          t = localStorage.getItem("theme");
+        } catch (e) {}
+        if (!t)
+          t = matchMedia("(prefers-color-scheme: dark)").matches
+            ? "dark"
+            : "light";
+        document.documentElement.setAttribute("data-theme", t);
+      })();
+    </script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-<!-- hero -->
-<section class="hero">
-  <div class="wrap hero-grid">
-    <div class="hero-text">
-      <div class="hero-head">
-        <div class="hero-eyebrow">Halo, saya</div>
-        <h1>Muhammad Abdullah</h1>
-      </div>
-      <p class="lede">Lulusan Sistem Informasi dengan latar belakang Teknik Komputer &amp; Jaringan. Saya membangun aplikasi web dan mobile, serta memahami jaringan dan server tempat aplikasi itu berjalan.</p>
-      <div class="hero-cta">
-        <a href="#proyek" class="btn btn-primary">Lihat proyek</a>
-        <a href="#" class="btn btn-outline">Unduh CV</a>
-      </div>
-      <div class="hero-social">
-        <a href="https://github.com/abdull614" target="_blank" rel="noopener noreferrer">GitHub</a>
-        <a href="https://www.linkedin.com/in/muhammad-abdullah-9a01511b3/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-        <a href="mailto:m.abdullah0614@gmail.com">Email</a>
-      </div>
-    </div>
-    <div class="hero-photo"><img src="asset/img/poto.png" alt="Foto Muhammad Abdullah"></div>
-  </div>
-</section>
-
-<!-- tentang saya -->
-<section id="tentang">
-  <div class="wrap about-grid">
-    <div class="about-text">
-      <h2>Tentang saya</h2>
-      <p>Saya mengawali dunia teknologi lewat jurusan <strong>Teknik Komputer dan Jaringan</strong> di SMK, tempat saya belajar merakit, mengonfigurasi, dan memelihara jaringan komputer.</p>
-      <p>Di jenjang kuliah <strong>Sistem Informasi</strong>, saya mendalami perancangan basis data, pengembangan aplikasi, dan analisis proses bisnis. Skripsi saya berupa sistem POS untuk toko sembako, dan saya menjalankannya di server yang saya konfigurasi sendiri.</p>
-    </div>
-    <div>
-      <h3 class="col-title">Pendidikan</h3>
-      <div class="edu-timeline">
-        <div class="edu-item">
-          <div class="edu-period">2022 – 2026</div>
-          <h3>S1 Sistem Informasi (S.Kom)</h3>
-          <div class="edu-org">Universitas Duta Bangsa Surakarta · IPK 3,56 / 4,00</div>
-          <p>Magang di Software House menagani pembuatan sistem web, aplikasi, dan sistem informasi.</p>
-          <p>Skripsi: Sistem Informasi Point of Sale dengan Modul Pencatatan Utang dan Rekomendasi Produk (studi kasus Toko Sembako Pak Sabar, Sukoharjo).</p>
+  <body>
+    <!-- header -->
+    <header>
+      <nav class="wrap">
+        <div class="logo">Muhammad Abdullah</div>
+        <div class="nav-links" id="navLinks">
+          <a href="#tentang">Tentang</a>
+          <a href="#keahlian">Keahlian</a>
+          <a href="#proyek">Proyek</a>
+          <a href="#kontak" class="nav-btn">Hubungi saya</a>
         </div>
-        <div class="edu-item">
-          <div class="edu-period">2019 – 2022</div>
-          <h3>SMK Teknik Komputer &amp; Jaringan</h3>
-          <div class="edu-org">SMK Muhammadiyah 1 Sukoharjo</div>
-          <p>Administrasi jaringan, konfigurasi router dan switch, manajemen komputer, serta praktik kerja industri (PKL).</p>
+        <button
+          class="theme-toggle"
+          id="themeToggle"
+          aria-label="Ganti tema terang/gelap"
+          type="button"
+        >
+          <svg
+            class="i-moon"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z" />
+          </svg>
+          <svg
+            class="i-sun"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <circle cx="12" cy="12" r="4" />
+            <path
+              d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"
+            />
+          </svg>
+        </button>
+        <button class="nav-toggle" id="navToggle" aria-label="Buka menu">
+          <span></span><span></span><span></span>
+        </button>
+      </nav>
+    </header>
+
+    <!-- hero -->
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div class="hero-text">
+          <div class="hero-head">
+            <div class="hero-eyebrow">Halo, saya</div>
+            <h1>Muhammad Abdullah</h1>
+          </div>
+          <p class="lede">
+            Lulusan Sistem Informasi dengan latar belakang Teknik Komputer &amp;
+            Jaringan. Saya membangun aplikasi web dan mobile, serta memahami
+            jaringan dan server tempat aplikasi itu berjalan.
+          </p>
+          <div class="hero-cta">
+            <a href="#proyek" class="btn btn-primary">Lihat proyek</a>
+            <a
+              href="asset/pdf/cv_muh abdullah.pdf"
+              class="btn btn-outline" target="_blank" rel="noopener noreferrer"
+              >Unduh CV</a
+            >
+          </div>
+          <div class="hero-social">
+            <a
+              href="https://github.com/abdull614"
+              target="_blank"
+              rel="noopener noreferrer"
+              >GitHub</a
+            >
+            <a
+              href="https://www.linkedin.com/in/muhammad-abdullah-9a01511b3/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >LinkedIn</a
+            >
+            <a href="mailto:m.abdullah0614@gmail.com">Email</a>
+          </div>
+        </div>
+        <div class="hero-photo">
+          <img src="asset/img/poto.png" alt="Foto Muhammad Abdullah" />
         </div>
       </div>
-    </div>
-  </div>
-</section>
+    </section>
 
-<!-- keahlian -->
-<section id="keahlian">
-  <div class="wrap">
-    <h2>Keahlian</h2>
-    <p class="sub">Pengembangan aplikasi, ditambah pemahaman jaringan dan server.</p>
-    <div class="skill-row"><h3>Web &amp; mobile</h3><div class="chips"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>PHP</span><span>Laravel</span><span>Flutter</span></div></div>
-    <div class="skill-row"><h3>Basis data</h3><div class="chips"><span>MySQL</span><span>Perancangan skema</span><span>Query</span></div></div>
-    <div class="skill-row"><h3>Jaringan</h3><div class="chips"><span>MikroTik</span><span>Wireless client &amp; AP</span><span>NAT</span><span>DHCP</span><span>Access list</span></div></div>
-    <div class="skill-row"><h3>Server</h3><div class="chips"><span>Linux</span><span>Cloudflare Tunnel</span><span>Hermes Agent</span><span>9Router</span></div></div>
-    <div class="skill-row"><h3>Alat &amp; metode</h3><div class="chips"><span>Git</span><span>Figma</span><span>VSCode</span><span>Postman</span><span>SDLC</span><span>Analisis sistem</span></div></div>
-  </div>
-</section>
-
-<!-- proyek -->
-<section id="proyek">
-  <div class="wrap">
-    <h2>Proyek</h2>
-    <p class="sub">Proyek skripsi, jaringan, server pribadi, dan eksperimen AI.</p>
-    <div class="project-grid">
-
-      <!-- pos skripsi -->
-      <div class="project-card">
-        <div class="project-thumb slider">
-          <img src="asset/img/pos/produk.png" alt="Halaman produk admin" class="slide active">
-          <img src="asset/img/pos/bukuUtang.png" alt="Buku utang" class="slide">
-          <img src="asset/img/pos/rekomendasi.png" alt="Rekomendasi restock" class="slide">
-          <div class="slider-dots"></div>
-          <a href="https://github.com/abdull614/pos.git" class="card-link" target="_blank" rel="noopener noreferrer" aria-label="Proyek Sistem Informasi POS Sembako">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><path d="M15 3h6v6"/><path d="M10 14L21 3"/></svg>
-          </a>
+    <!-- tentang saya -->
+    <section id="tentang">
+      <div class="wrap about-grid">
+        <div class="about-text">
+          <h2>Tentang saya</h2>
+          <p>
+            Saya mengawali dunia teknologi lewat jurusan
+            <strong>Teknik Komputer dan Jaringan</strong> di SMK, tempat saya
+            belajar merakit, mengonfigurasi, dan memelihara jaringan komputer.
+          </p>
+          <p>
+            Di jenjang kuliah <strong>Sistem Informasi</strong>, saya mendalami
+            perancangan basis data, pengembangan aplikasi, dan analisis proses
+            bisnis. Skripsi saya berupa sistem POS untuk toko sembako, dan saya
+            menjalankannya di server yang saya konfigurasi sendiri.
+          </p>
         </div>
-        <div class="project-body">
-          <div class="project-cat">Skripsi</div>
-          <h3>Sistem Informasi POS Sembako</h3>
-          <p>Aplikasi web (Laravel) dan mobile (Flutter) untuk mengelola produk dan stok, mencatat utang pelanggan, melihat laporan penjualan, dan mendapat rekomendasi produk bagi UMKM.</p>
-          <div class="tag-row">
-            <span class="tag">Laravel</span>
-            <span class="tag">Flutter</span>
-            <span class="tag">Python</span>
-            <span class="tag">MySQL</span>
-            <span class="tag">Vite</span>
+        <div>
+          <h3 class="col-title">Pendidikan</h3>
+          <div class="edu-timeline">
+            <div class="edu-item">
+              <div class="edu-period">2022 – 2026</div>
+              <h3>S1 Sistem Informasi (S.Kom)</h3>
+              <div class="edu-org">
+                Universitas Duta Bangsa Surakarta · IPK 3,56 / 4,00
+              </div>
+              <p>
+                Magang di Software House menagani pembuatan sistem web,
+                aplikasi, dan sistem informasi.
+              </p>
+              <p>
+                Skripsi: Sistem Informasi Point of Sale dengan Modul Pencatatan
+                Utang dan Rekomendasi Produk (studi kasus Toko Sembako Pak
+                Sabar, Sukoharjo).
+              </p>
+            </div>
+            <div class="edu-item">
+              <div class="edu-period">2019 – 2022</div>
+              <h3>SMK Teknik Komputer &amp; Jaringan</h3>
+              <div class="edu-org">SMK Muhammadiyah 1 Sukoharjo</div>
+              <p>
+                Administrasi jaringan, konfigurasi router dan switch, manajemen
+                komputer, serta praktik kerja industri (PKL).
+              </p>
+            </div>
           </div>
         </div>
       </div>
+    </section>
 
-      <!-- pelatihan dicoding -->
-      <div class="project-card">
-        <div class="project-thumb slider">
-          <img src="asset/img/projekDicoding/1.png" alt="Project Dicoding 1" class="slide active portrait">
-          <img src="asset/img/projekDicoding/2.png" alt="Project Dicoding 2" class="slide">
-          <img src="asset/img/projekDicoding/3.png" alt="Project Dicoding 3" class="slide">
-          <div class="slider-dots"></div>
-          <!-- <a href="#" class="card-link" target="_blank" rel="noopener noreferrer" aria-label="Belajar Dasar Pemrograman Web Dicoding">
+    <!-- keahlian -->
+    <section id="keahlian">
+      <div class="wrap">
+        <h2>Keahlian</h2>
+        <p class="sub">
+          Pengembangan aplikasi, ditambah pemahaman jaringan dan server.
+        </p>
+        <div class="skill-row">
+          <h3>Web &amp; mobile</h3>
+          <div class="chips">
+            <span>HTML</span><span>CSS</span><span>JavaScript</span
+            ><span>PHP</span><span>Laravel</span><span>Flutter</span>
+          </div>
+        </div>
+        <div class="skill-row">
+          <h3>Basis data</h3>
+          <div class="chips">
+            <span>MySQL</span><span>Perancangan skema</span><span>Query</span>
+          </div>
+        </div>
+        <div class="skill-row">
+          <h3>Jaringan</h3>
+          <div class="chips">
+            <span>MikroTik</span><span>Wireless client &amp; AP</span
+            ><span>NAT</span><span>DHCP</span><span>Access list</span>
+          </div>
+        </div>
+        <div class="skill-row">
+          <h3>Server</h3>
+          <div class="chips">
+            <span>Linux</span><span>Cloudflare Tunnel</span
+            ><span>Hermes Agent</span><span>9Router</span>
+          </div>
+        </div>
+        <div class="skill-row">
+          <h3>Alat &amp; metode</h3>
+          <div class="chips">
+            <span>Git</span><span>Figma</span><span>VSCode</span
+            ><span>Postman</span><span>SDLC</span><span>Analisis sistem</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- proyek -->
+    <section id="proyek">
+      <div class="wrap">
+        <h2>Proyek</h2>
+        <p class="sub">
+          Proyek skripsi, jaringan, server pribadi, dan eksperimen AI.
+        </p>
+        <div class="project-grid">
+          <!-- pos skripsi -->
+          <div class="project-card">
+            <div class="project-thumb slider">
+              <img
+                src="asset/img/pos/produk.png"
+                alt="Halaman produk admin"
+                class="slide active"
+              />
+              <img
+                src="asset/img/pos/bukuUtang.png"
+                alt="Buku utang"
+                class="slide"
+              />
+              <img
+                src="asset/img/pos/rekomendasi.png"
+                alt="Rekomendasi restock"
+                class="slide"
+              />
+              <div class="slider-dots"></div>
+              <a
+                href="https://github.com/abdull614/pos.git"
+                class="card-link"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Proyek Sistem Informasi POS Sembako"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+                  />
+                  <path d="M15 3h6v6" />
+                  <path d="M10 14L21 3" />
+                </svg>
+              </a>
+            </div>
+            <div class="project-body">
+              <div class="project-cat">Skripsi</div>
+              <h3>Sistem Informasi POS Sembako</h3>
+              <p>
+                Aplikasi web (Laravel) dan mobile (Flutter) untuk mengelola
+                produk dan stok, mencatat utang pelanggan, melihat laporan
+                penjualan, dan mendapat rekomendasi produk bagi UMKM.
+              </p>
+              <div class="tag-row">
+                <span class="tag">Laravel</span>
+                <span class="tag">Flutter</span>
+                <span class="tag">Python</span>
+                <span class="tag">MySQL</span>
+                <span class="tag">Vite</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- pelatihan dicoding -->
+          <div class="project-card">
+            <div class="project-thumb slider">
+              <img
+                src="asset/img/projekDicoding/1.png"
+                alt="Project Dicoding 1"
+                class="slide active portrait"
+              />
+              <img
+                src="asset/img/projekDicoding/2.png"
+                alt="Project Dicoding 2"
+                class="slide"
+              />
+              <img
+                src="asset/img/projekDicoding/3.png"
+                alt="Project Dicoding 3"
+                class="slide"
+              />
+              <div class="slider-dots"></div>
+              <!-- <a href="#" class="card-link" target="_blank" rel="noopener noreferrer" aria-label="Belajar Dasar Pemrograman Web Dicoding">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><path d="M15 3h6v6"/><path d="M10 14L21 3"/></svg>
           </a> -->
-        </div>
-        <div class="project-body">
-          <div class="project-cat">Pelatihan Dicoding</div>
-          <h3>Belajar Dasar Pemrograman Web</h3>
-          <p>Proyek akhir kelas Dicoding: halaman website dengan semantic HTML dan layouting.</p>
-          <div class="tag-row">
-            <span class="tag">HTML</span>
-            <span class="tag">CSS</span>
-            <span class="tag">JavaScript</span>
+            </div>
+            <div class="project-body">
+              <div class="project-cat">Pelatihan Dicoding</div>
+              <h3>Belajar Dasar Pemrograman Web</h3>
+              <p>
+                Proyek akhir kelas Dicoding: halaman website dengan semantic
+                HTML dan layouting.
+              </p>
+              <div class="tag-row">
+                <span class="tag">HTML</span>
+                <span class="tag">CSS</span>
+                <span class="tag">JavaScript</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- server -->
+          <div class="project-card">
+            <div class="project-thumb slider">
+              <img
+                src="asset/img/server/arsitektur.png"
+                alt="Arsitektur home server"
+                class="slide active portrait"
+              />
+              <img
+                src="asset/img/server/htop.png"
+                alt="Status server"
+                class="slide"
+              />
+              <img
+                src="asset/img/server/cloudflare.png"
+                alt="Cloudflare Tunnel"
+                class="slide"
+              />
+              <div class="slider-dots"></div>
+            </div>
+            <div class="project-body">
+              <div class="project-cat">Proyek pribadi · Infrastruktur</div>
+              <h3>Home Server</h3>
+              <p>
+                Mini PC Linux yang saya konfigurasi sebagai server untuk
+                aplikasi POS skripsi, diakses lewat domain sendiri dan
+                Cloudflare Tunnel.
+              </p>
+              <div class="tag-row">
+                <span class="tag">Mini PC</span>
+                <span class="tag">Linux</span>
+                <span class="tag">Cloudflare Tunnel</span>
+                <span class="tag">Domain</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- mikrotik -->
+          <div class="project-card">
+            <div class="project-thumb slider">
+              <img
+                src="asset/img/mikrotik/dhcpclient.png"
+                alt="DHCP client"
+                class="slide active portrait"
+              />
+              <img
+                src="asset/img/mikrotik/interface.png"
+                alt="Interface"
+                class="slide"
+              />
+              <img src="asset/img/mikrotik/nat.png" alt="NAT" class="slide" />
+              <img
+                src="asset/img/mikrotik/ping.png"
+                alt="Uji ping"
+                class="slide"
+              />
+              <img
+                src="asset/img/mikrotik/resources.png"
+                alt="Resources"
+                class="slide"
+              />
+              <img
+                src="asset/img/mikrotik/wireless.png"
+                alt="Wireless"
+                class="slide"
+              />
+              <div class="slider-dots"></div>
+            </div>
+            <div class="project-body">
+              <div class="project-cat">Proyek pribadi · Jaringan</div>
+              <h3>Jaringan MikroTik dengan Wi-Fi sebagai Uplink</h3>
+              <p>
+                MikroTik RB951Ui-2HnD mengambil internet dari Wi-Fi rumah lewat
+                wireless client, lalu membagikannya ke mini PC lewat LAN.
+                Manajemen jarak jauh memakai AP tersembunyi yang hanya bisa
+                dipakai laptop saya.
+              </p>
+              <div class="tag-row">
+                <span class="tag">MikroTik</span>
+                <span class="tag">Wireless Client</span>
+                <span class="tag">Hidden SSID</span>
+                <span class="tag">Access List</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- hermes agent -->
+          <div class="project-card">
+            <div class="project-thumb slider">
+              <img
+                src="asset/img/hermes/alur.png"
+                alt="Alur Hermes dan 9Router"
+                class="slide active portrait"
+              />
+              <img
+                src="asset/img/hermes/9router.png"
+                alt="Dashboard 9Router"
+                class="slide"
+              />
+              <img
+                src="asset/img/hermes/hermes.png"
+                alt="Hermes Agent"
+                class="slide"
+              />
+              <div class="slider-dots"></div>
+            </div>
+            <div class="project-body">
+              <div class="project-cat">Proyek pribadi · AI agent</div>
+              <h3>Hermes Agent dengan 9Router</h3>
+              <p>
+                AI agent di mini PC yang diakses lewat bot Telegram. 9Router
+                menjadi gateway yang mengatur model AI yang dipakai Hermes,
+                termasuk pergantian model saat satu provider tidak tersedia.
+              </p>
+              <div class="tag-row">
+                <span class="tag">Hermes Agent</span>
+                <span class="tag">9Router</span>
+                <span class="tag">Linux</span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
+    </section>
 
-      <!-- server -->
-      <div class="project-card">
-        <div class="project-thumb slider">
-          <img src="asset/img/server/arsitektur.png" alt="Arsitektur home server" class="slide active portrait">
-          <img src="asset/img/server/htop.png" alt="Status server" class="slide">
-          <img src="asset/img/server/cloudflare.png" alt="Cloudflare Tunnel" class="slide">
-          <div class="slider-dots"></div>
+    <!-- Serifikat -->
+    <section id="sertifikat">
+      <div class="wrap">
+        <h2>Sertifikat</h2>
+        <p class="sub">Pelatihan dan sertifikasi yang saya selesaikan.</p>
+        <div class="contact-list">
+          <a
+            href="https://drive.google.com/file/d/1Mmji-BnMbLLs7JMjo5kWQp5eIrV_GcWh/view?usp=drive_link"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span class="k">Februari 2024</span>
+            <span class="v">Belajar Dasar Pemrograman Web · Dicoding</span>
+          </a>
         </div>
-        <div class="project-body">
-          <div class="project-cat">Proyek pribadi · Infrastruktur</div>
-          <h3>Home Server</h3>
-          <p>Mini PC Linux yang saya konfigurasi sebagai server untuk aplikasi POS skripsi, diakses lewat domain sendiri dan Cloudflare Tunnel.</p>
-          <div class="tag-row">
-            <span class="tag">Mini PC</span>
-            <span class="tag">Linux</span>
-            <span class="tag">Cloudflare Tunnel</span>
-            <span class="tag">Domain</span>
-          </div>
+        <div class="contact-list">
+          <a
+            href="https://drive.google.com/file/d/1hv9W1LXKzQc62luaSrzqPfZRcWk1QvuC/view?usp=drive_link"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span class="k">Juni 2026</span>
+            <span class="v"
+              >Belajar Penerapan Data Science dengan Microsoft Fabric dan
+              Membangun Aplikasi Gen AI dengan Microsoft Azure</span
+            >
+          </a>
+        </div>
+        <div class="contact-list">
+          <a
+            href="https://drive.google.com/file/d/1voec8yrjS97Jg4-LcG_neYLzb9pdZvpJ/view?usp=drive_link"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span class="k">Maret 2024</span>
+            <span class="v"
+              >Cloud Practitioner Essentials (Belajar Dasar AWS Cloud)</span
+            >
+          </a>
+        </div>
+
+        <p class="sub" style="margin-top: 20px">
+          <a
+            href="https://drive.google.com/drive/folders/11BLYsIAmMbroW_3zx6y7HLFj8APIufli?usp=sharing"
+            target="_blank"
+            rel="noopener noreferrer"
+            style="border-bottom: 1px solid var(--line)"
+          >
+            Lihat semua sertifikat dan webinar →
+          </a>
+        </p>
+      </div>
+    </section>
+
+    <!-- kontak -->
+    <section id="kontak">
+      <div class="wrap">
+        <h2>Kontak</h2>
+        <p class="sub">
+          Terbuka untuk peluang magang, posisi entry-level, dan kolaborasi
+          proyek.
+        </p>
+        <div class="contact-list">
+          <a href="mailto:m.abdullah0614@gmail.com">
+            <span class="k">Email</span>
+            <span class="v">m.abdullah0614@gmail.com</span>
+          </a>
+          <a
+            href="https://www.linkedin.com/in/muhammad-abdullah-9a01511b3/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span class="k">LinkedIn</span>
+            <span class="v">muhammad-abdullah</span>
+          </a>
+          <a
+            href="https://github.com/abdull614"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span class="k">GitHub</span>
+            <span class="v">github.com/abdull614</span>
+          </a>
         </div>
       </div>
+    </section>
 
-      <!-- mikrotik -->
-      <div class="project-card">
-        <div class="project-thumb slider">
-          <img src="asset/img/mikrotik/dhcpclient.png" alt="DHCP client" class="slide active portrait">
-          <img src="asset/img/mikrotik/interface.png" alt="Interface" class="slide">
-          <img src="asset/img/mikrotik/nat.png" alt="NAT" class="slide">
-          <img src="asset/img/mikrotik/ping.png" alt="Uji ping" class="slide">
-          <img src="asset/img/mikrotik/resources.png" alt="Resources" class="slide">
-          <img src="asset/img/mikrotik/wireless.png" alt="Wireless" class="slide">
-          <div class="slider-dots"></div>
-        </div>
-        <div class="project-body">
-          <div class="project-cat">Proyek pribadi · Jaringan</div>
-          <h3>Jaringan MikroTik dengan Wi-Fi sebagai Uplink</h3>
-          <p>MikroTik RB951Ui-2HnD mengambil internet dari Wi-Fi rumah lewat wireless client, lalu membagikannya ke mini PC lewat LAN. Manajemen jarak jauh memakai AP tersembunyi yang hanya bisa dipakai laptop saya.</p>
-          <div class="tag-row">
-            <span class="tag">MikroTik</span>
-            <span class="tag">Wireless Client</span>
-            <span class="tag">Hidden SSID</span>
-            <span class="tag">Access List</span>
-          </div>
-        </div>
+    <!-- footer -->
+    <footer>
+      <div class="wrap footer-grid">
+        <div class="logo">Muhammad Abdullah</div>
+        <p>© 2026 Muhammad Abdullah</p>
       </div>
+    </footer>
 
-      <!-- hermes agent -->
-      <div class="project-card">
-        <div class="project-thumb slider">
-          <img src="asset/img/hermes/alur.png" alt="Alur Hermes dan 9Router" class="slide active portrait">
-          <img src="asset/img/hermes/9router.png" alt="Dashboard 9Router" class="slide">
-          <img src="asset/img/hermes/hermes.png" alt="Hermes Agent" class="slide">
-          <div class="slider-dots"></div>
-        </div>
-        <div class="project-body">
-          <div class="project-cat">Proyek pribadi · AI agent</div>
-          <h3>Hermes Agent dengan 9Router</h3>
-          <p>AI agent di mini PC yang diakses lewat bot Telegram. 9Router menjadi gateway yang mengatur model AI yang dipakai Hermes, termasuk pergantian model saat satu provider tidak tersedia.</p>
-          <div class="tag-row">
-            <span class="tag">Hermes Agent</span>
-            <span class="tag">9Router</span>
-            <span class="tag">Linux</span>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- Serifikat -->
- <section id="sertifikat">
-  <div class="wrap">
-    <h2>Sertifikat</h2>
-    <p class="sub">Pelatihan dan sertifikasi yang saya selesaikan.</p>
-    <div class="contact-list">
-      <a href="https://drive.google.com/file/d/1Mmji-BnMbLLs7JMjo5kWQp5eIrV_GcWh/view?usp=drive_link" target="_blank" rel="noopener noreferrer">
-        <span class="k">Februari 2024</span>
-        <span class="v">Belajar Dasar Pemrograman Web · Dicoding</span>
-      </a>
-    </div>
-    <div class="contact-list">
-      <a href="https://drive.google.com/file/d/1hv9W1LXKzQc62luaSrzqPfZRcWk1QvuC/view?usp=drive_link" target="_blank" rel="noopener noreferrer">
-        <span class="k">Juni 2026</span>
-        <span class="v">Belajar Penerapan Data Science dengan Microsoft Fabric dan Membangun Aplikasi Gen AI dengan Microsoft Azure</span>
-      </a>
-    </div>
-    <div class="contact-list">
-      <a href="https://drive.google.com/file/d/1voec8yrjS97Jg4-LcG_neYLzb9pdZvpJ/view?usp=drive_link" target="_blank" rel="noopener noreferrer">
-        <span class="k">Maret 2024</span>
-        <span class="v">Cloud Practitioner Essentials (Belajar Dasar AWS Cloud)</span>
-      </a>
-    </div>
-
-    <p class="sub" style="margin-top:20px">
-      <a href="https://drive.google.com/drive/folders/11BLYsIAmMbroW_3zx6y7HLFj8APIufli?usp=sharing" target="_blank" rel="noopener noreferrer" style="border-bottom:1px solid var(--line)">
-        Lihat semua sertifikat dan webinar →
-      </a>
-    </p>
-  </div>
-</section>
-
-<!-- kontak -->
-<section id="kontak">
-  <div class="wrap">
-    <h2>Kontak</h2>
-    <p class="sub">Terbuka untuk peluang magang, posisi entry-level, dan kolaborasi proyek.</p>
-    <div class="contact-list">
-      <a href="mailto:m.abdullah0614@gmail.com">
-        <span class="k">Email</span>
-        <span class="v">m.abdullah0614@gmail.com</span>
-      </a>
-      <a href="https://www.linkedin.com/in/muhammad-abdullah-9a01511b3/" target="_blank" rel="noopener noreferrer">
-        <span class="k">LinkedIn</span>
-        <span class="v">muhammad-abdullah</span>
-      </a>
-      <a href="https://github.com/abdull614" target="_blank" rel="noopener noreferrer">
-        <span class="k">GitHub</span>
-        <span class="v">github.com/abdull614</span>
-      </a>
-    </div>
-  </div>
-</section>
-
-<!-- footer -->
-<footer>
-  <div class="wrap footer-grid">
-    <div class="logo">Muhammad Abdullah</div>
-    <p>© 2026 Muhammad Abdullah</p>
-  </div>
-</footer>
-
-<script src="script.js"></script>
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>
